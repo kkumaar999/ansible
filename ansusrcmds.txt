@@ -1,0 +1,564 @@
+    1  clear
+    2  id ansusr
+    3  ssh server2
+    4  ssh-keygen
+    5  ssh-copy-id server2
+    6  ssh server2
+    7  cat /etc/hosts
+    8  sudo yum install ansible
+    9  sudo yum install epel-release
+   10  sudo yum install ansible
+   11  ps -ef|grep 15216
+   12  sudo service httpd start
+   13  sudo service httpd stop
+   14  sudo yum install ansible
+   15  service status ansible
+   16  service httpd status
+   17  cd /etc/ansible
+   18  ls
+   19  cp hosts hosts.bak
+   20  cd /etc/
+   21  sudo chown -R ansusr:ansusr ansible
+   22  cd ansible
+   23  cp hosts hosts.bak
+   24  > hosts
+   25  vi hosts
+   26  cat /etc/hosts
+   27  ansible-doc yum
+   28  ansible server2 -m yum -a "name=httpd state=installed"
+   29  sudo ansible server2 -m yum -a "name=httpd state=installed"
+   30  ssh-keygen
+   31  ssh-copy-id server2
+   32  sudo ansible server2 -m yum -a "name=httpd state=installed"
+   33  ssh server2
+   34  sudo ansible server2 -m yum -a "name=httpd state=installed"
+   35  cd /etc
+   36  chmod -R 775 ansible
+   37  cd ansible
+   38  ansible server2 -m yum -a "name=httpd state=installed"
+   39  ls
+   40  cat hosts
+   41  cat /etc/hosts
+   42  ssh 192.168.40.129
+   43  exit
+   44  ansible server2 -m service -a "name=httpd state=started"
+   45  exit
+   46  ifconfig -a
+   47  vi /etc/hosts
+   48  su - root
+   49  ansible server2 -m service -a "name=httpd state=started"
+   50  exit
+   51  clear
+   52  pwd
+   53  vi webserver.yml
+   54  ansible-playbook webserver.yml
+   55  clear
+   56  ls -la webserver.yml
+   57  ansible-playbook webserver.yml --syntax-check
+   58  ansible-playbook webserver.yml --check
+   59  vi webserver.yml
+   60  ansible-playbook webserver.yml --check
+   61  ansible-playbook webserver.yml
+   62  pwd
+   63  ls
+   64  vi index.html
+   65  vi webserver.yml
+   66  ansible-playbook webserver.yml --syntax-check
+   67  ansible-playbook webserver.yml --check
+   68  ansible-playbook webserver.yml 
+   69  ansible -m ping server2
+   70  vi webserver.yml
+   71  ansible-playbook webserver.yml
+   72  clear
+   73  vi webserver.yml
+   74  ansible-playbook webserver.yml
+   75  clear
+   76  ansible-playbook webserver.yml --syntax-check
+   77  ansible-playbook webserver.yml --check
+   78  ansible-playbook webserver.yml 
+   79  clear
+   80  pwd
+   81  vi file1.yml
+   82  uptime
+   83  clear
+   84  ls -ltr
+   85  cp webserver.yml forloop.yml
+   86  vi forloop.yml 
+   87  ansible-playbook forloop.yml --syntax-checki
+   88  clear
+   89  ansible-playbook forloop.yml --syntax-check
+   90  vi hosts
+   91  vi forloop.yml 
+   92  ansible-playbook forloop.yml --syntax-check
+   93  ansible-playbook forloop.yml 
+   94  clear
+   95  vi forloop.yml
+   96  ansible-playbook forloop.yml 
+   97  vi forloop.yml 
+   98  ansible-playbook forloop.yml 
+   99  cp forloop.yml debug.yml
+  100  vi debug.yml
+  101  ansible-playbook debug.yml --syntax-check
+  102  ansible-playbook debug.yml --checki
+  103  ansible-playbook debug.yml --check
+  104  vi forloop.yml
+  105  ansible-playbook debug.yml 
+  106  vi forloop.yml 
+  107  ls -ltr
+  108  vi debug.yml 
+  109  ansible-playbook debug.yml --syntax-check
+  110  ansible-playbook debug.yml 
+  111  ansible server2 -m status
+  112  ansible server2 -m ping
+  113  ansible -m ping server2
+  114  ansible server2 -m setup
+  115  ansible server2 -m setup | more
+  116  ls -ltr
+  117  cp forloop.yml ifcondition.yml
+  118  vi ifcondition.yml
+  119  ansible-playbook ifcondition.yml --syntax-check
+  120  ansible-playbook ifcondition.yml 
+  121  vi ifcondition.yml 
+  122  ansible-playbook ifcondition.yml 
+  123  vi ifcondition.yml 
+  124  vi index.html
+  125  vi ifcondition.yml 
+  126  ansible-playbook ifcondition.yml 
+  127  vi ifcondition.yml 
+  128  ansible-playbook ifcondition.yml 
+  129  vi index.html 
+  130  vi ifcondition.yml
+  131  ansible-playbook ifcondition.yml 
+  132  vi ifcondition.yml 
+  133  ansible-playbook ifcondition.yml 
+  134  ansible all --list-hosts
+  135  clear
+  136  ls -ltr
+  137  vi ifcondition.yml 
+  138  ls -ltr
+  139  ansible-playbook ifcondition.yml
+  140  ansible server2 -m setup
+  141  ansible server2 -m setup > kranthi.txt
+  142  vi kranthi.txt 
+  143  ls -ltr
+  144  vi ifcondition.yml
+  145  cp ifcondition.yml ifcondition1.yml
+  146  vi ifcondition1.yml 
+  147  ansible-playbook ifcondition.yml 
+  148  vi index.html
+  149  ansible-playbook ifcondition.yml 
+  150  vi index.html 
+  151  vi ifcondition1.yml 
+  152  ansible-playbook ifcondition.yml 
+  153  view index.html 
+  154  vi index.html 
+  155  vi ifcondition1.yml
+  156  ansible-playbook ifcondition1.yml
+  157  ansible-playbook ifcondition1.yml --syntax-check
+  158  vi ifcondition1.yml
+  159  ansible-playbook ifcondition1.yml
+  160  vi ifcondition1.yml 
+  161  ansible-playbook ifcondition1.yml --syntax-check
+  162  ansible-playbook ifcondition1.yml
+  163  vi index.html 
+  164  cat index.html 
+  165  vi ifcondition1.yml 
+  166  pwd
+  167  ls
+  168  mkdir roles
+  169  cd roles
+  170  ansible-galaxy init webserver
+  171  ls
+  172  cd *
+  173  ls
+  174  ansible -m ping server2
+  175  cd tasks
+  176  ls
+  177  vi main.yml 
+  178  pwd
+  179  cd ..
+  180  ls
+  181  cd handlers
+  182  vi main.yml 
+  183  ls
+  184  pwd
+  185  cd ..
+  186  ls
+  187  cd vars
+  188  ls
+  189  vi main.yml 
+  190  cd files
+  191  cd ../files
+  192  ls
+  193  vi index.html
+  194  pwd
+  195  cd ../
+  196  ls
+  197  pwd
+  198  cd ..
+  199  ls
+  200  pwd
+  201  vi roles.yml
+  202  ansible-playbook roles.yml
+  203  cd ..
+  204  ls
+  205  cd ansusr
+  206  ls
+  207  cd roles
+  208  ls
+  209  cd *
+  210  ls
+  211  tree
+  212  cd su - python
+  213  pwd
+  214  ls
+  215  cd roles
+  216  ls
+  217  ansible-galaxy init mysql
+  218  ls -ltr
+  219  cd mysql
+  220  ls
+  221  cd templates
+  222  cd /tmp
+  223  cd -
+  224  cp my.cnf /home/ansusr/roles/mysql/templates
+  225  cd /home/ansusr/roles/mysql/templates
+  226  ls -ltr
+  227  chmod 775 *
+  228  ls
+  229  vi *
+  230  ls
+  231  cp my.cnf my.cnf.j2
+  232  rm my.cnf
+  233  vi my.cnf.j2 
+  234  cd ..
+  235  ls
+  236  cd defaults/
+  237  vi main.yml 
+  238  cd ../templates/
+  239  vi my.cnf.j2 
+  240  cd ..
+  241  ls
+  242  pwd
+  243  cd tasks
+  244  ls
+  245  vi main.yml 
+  246  cd ..
+  247  ls
+  248  cd ..
+  249  ls
+  250  cd ..
+  251  ls
+  252  vi mysql.yml
+  253  ansible-playbook mysql.yml
+  254  clear
+  255  ansible-playbook mysql.yml --syntax-check
+  256  ansible-playbook mysql.yml --check
+  257  ansible-playbook mysql.yml 
+  258  history
+  259  pwd
+  260  cd roles
+  261  cd mysql
+  262  pwd
+  263  ls -ltr
+  264  clear
+  265  pwd
+  266  ls -ltr
+  267  clear
+  268  cd templates
+  269  pwd
+  270  ls -ltr
+  271  cat my.cnf.j2 
+  272  cd ../defaults
+  273  clear
+  274  pwd
+  275  cat main.yml 
+  276  cd ../tasks
+  277  clear
+  278  pwd
+  279  cat main.yml 
+  280  cd ..
+  281  ls
+  282  cd ..
+  283  ls
+  284  cd ..
+  285  clear
+  286  ls -la mysql*
+  287  clear
+  288  pwd
+  289  ls -la mysql*
+  290  cat mysql.yml 
+  291  cat /etc/ansible
+  292  cd /etc/ansible
+  293  mkdir prod
+  294  cd prod
+  295  vi hosts
+  296  cd ..
+  297  cat hosts
+  298  cler
+  299  clear
+  300  pwd
+  301  vi hosts
+  302  mv hosts hosts1
+  303  cd /home/ansusr
+  304  ansible-playbook mysql.yml
+  305  cd /etc/ansible
+  306  ls
+  307  cd prod
+  308  ls
+  309  pwd
+  310  cd roles
+  311  ls
+  312  cd roles
+  313  cd ../roles/
+  314  ls
+  315  cd ../
+  316  ls
+  317  cd prod
+  318  ls
+  319  cat hosts
+  320  cd ../
+  321  ls
+  322  mv hosts1 hosts
+  323  ls
+  324  cat hosts
+  325  > hosts
+  326  cd /home/ansusr
+  327  ansible-playbook mysql.yml 
+  328  ls
+  329  pwd
+  330  cd /etc/ansible
+  331  ls
+  332  ls -ltr
+  333  cd prod
+  334  ls
+  335  ls -ltr
+  336  chmod -R 775 *
+  337  cd /home/ansusr
+  338  ls
+  339  ansible-playbook mysql.yml 
+  340  vi /etc/ansible
+  341  cd /etc/ansible/
+  342  ls
+  343  cat hosts
+  344  vi hosts
+  345  pwd
+  346  cd /home/ansusr/
+  347  ls
+  348  vi mysql.yml 
+  349  ansible-playbook mysql.yml 
+  350  cd /etc/ansible/
+  351  ls
+  352  vi ansible.cfg 
+  353  grep -i inventory ansible.cfg
+  354  ansible all -m setup --tree /tmp/facts
+  355  cd /tmp/facts
+  356  ls
+  357  tree
+  358  yum install tree
+  359  sudo yum install root
+  360  tree
+  361  sudo tree
+  362  pwd
+  363  tree
+  364  cd ..
+  365  tree
+  366  cd /home/ansusr
+  367  tree
+  368  cd modules
+  369  ls
+  370  cd roles
+  371  tree
+  372  ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+  373  ls -R
+  374  tree
+  375  cd /tmp/facts
+  376  ls
+  377  cd server2 
+  378  ls
+  379  cat server2 
+  380  view server2 
+  381  ssh server2
+  382  ls -latr
+  383  pwd
+  384  ssh server2
+  385  pwd
+  386  vi awsvpc.yml
+  387  exit
+  388  ls -ltr
+  389  exit
+  390  ansible-playbook awsvpc.yml
+  391  ls -ltr
+  392  chmod 775 awsvpc.retry
+  393  clear
+  394  ls -ltr
+  395  pip install boto3
+  396  yum install python
+  397  sudo yum install python
+  398   pip install requests[security]
+  399  ls
+  400  ls -latr
+  401  ls -ltr
+  402  sudo su - 
+  403  ansible-playbook ec2.yml --syntax-check
+  404  ansible-playbook ec2.yml 
+  405  ls -ltr
+  406  cat ec2.yml
+  407  vi ec2.yml
+  408  sudo su -
+  409  cd /etc/ansible
+  410  ls
+  411  cd /home/ansible
+  412  ls
+  413  cd /home/ansusr
+  414  ls
+  415  ls -ltr
+  416  ls -la *yml*
+  417  cat include.yml
+  418  cat httpd.yml
+  419  cat webserver.yml
+  420  pwd
+  421  ls -ltr
+  422  clear
+  423  pwd
+  424  ls -ltr
+  425  cd ..
+  426  ls -ltr
+  427  cd ansusr
+  428  git init .
+  429  cd /tmp/kranthi
+  430  ls
+  431  ls -ltr
+  432  pwd
+  433  cd /home/ansusr
+  434  ls
+  435  pwd
+  436  ls -ld .ssh
+  437  cd .ssh
+  438  ls
+  439  cat id_rsa.pub
+  440  git clone git@github.com:kkumaar999/ansible.git
+  441  git remote -v
+  442  git remote
+  443  ls -ltr
+  444  cd ansible
+  445  ls
+  446  rm -rf ansible
+  447  cd ..
+  448  ls
+  449  pwd
+  450  cd ..
+  451  ls
+  452  git clone git@github.com:kkumaar999/ansible.git
+  453  ls -ltr
+  454  cd ansible
+  455  ls
+  456  cd ..
+  457  pwd
+  458  ls
+  459  git remote -v
+  460  git push origin master
+  461  git pull origin master
+  462  cd ansible
+  463  git remote -v
+  464  cd ..
+  465  ls
+  466  ls -ltr
+  467  rm -rf ansible
+  468  git remote add origin git@github.com:kkumaar999/ansible.git
+  469  git remote -v
+  470  ls -ltr
+  471  pwd
+  472  git push origin master
+  473  git pull origin master
+  474  git push origin master
+  475  git remote -v
+  476  ls -ltr
+  477  git push origin master
+  478  git pull origin master
+  479  git add .
+  480  git push origin master
+  481  git init .
+  482  pwd
+  483  git add .
+  484  ls -la kranthi999.pem
+  485  sudo su - 775 kranthi999.pem 
+  486  sudo chmod 775 kranthi999.pem 
+  487  git push origin master
+  488  git add .
+  489  git commit -m "all commits"
+  490  ls -ltr
+  491  git push origin master
+  492  grep -rn "httpd" .
+  493  cat ./webserver.yml
+  494  cat /etc/passwd
+  495  cat /etc/passwd|grep ans*
+  496  cd /home/ansible
+  497  ls
+  498  cd /etc/ansible
+  499  ls
+  500  cd hosts
+  501  ls
+  502  cat hosts
+  503  ls
+  504  ls -ltr
+  505  cd roles
+  506  ls
+  507  cd ..
+  508  ls
+  509  cd /home/ansusr
+  510  ls
+  511  ls -ltr
+  512  cat file.yml
+  513  cat forloop.yml
+  514  cat /etc/hosts
+  515  ls
+  516  pwd
+  517  cd roles
+  518  ls
+  519  cd webserver/
+  520  ls
+  521  ls -ltr
+  522  cd tasks
+  523  ls
+  524  cat main.yml 
+  525  pwd
+  526  cd ../..
+  527  ls
+  528  cd ..
+  529  grep -rn "roles" .
+  530  cat roles.yml 
+  531  cd /home/ansusr
+  532  ls
+  533  cd /etc/ansusr
+  534  ls
+  535  cd /etc/ansible
+  536  ls
+  537  cd prod
+  538  ls
+  539  cd hostss
+  540  cat hosts
+  541  cd ..
+  542  ls
+  543  cd roles
+  544  ls
+  545  cd /home/ansusr
+  546  ls
+  547  cd roles
+  548  ls
+  549  cd webserver/
+  550  ls
+  551  cd defaults/
+  552  ls
+  553  cat main.yml 
+  554  cd ..
+  555  ls
+  556  cd files
+  557  ls
+  558  cd ../handlers/
+  559  ls
+  560  cat main.yml 
+  561  pwd
+  562  history -1000
+  563  history 1000
+  564  history 1000 > /tmp/ansusrcmds.txt
