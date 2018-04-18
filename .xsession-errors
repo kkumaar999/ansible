@@ -1,0 +1,29 @@
+GNOME_KEYRING_SOCKET=/tmp/keyring-nvLLD4/socket
+SSH_AUTH_SOCK=/tmp/keyring-nvLLD4/socket.ssh
+gnome-session[16997]: WARNING: Could not launch application 'linc-cleanup-sockets.desktop': Unable to start application: Failed to execute child process "/usr/bin/linc-cleanup-sockets" (No such file or directory)
+** Message: adding killswitch idx 0 state KILLSWITCH_STATE_UNBLOCKED
+** Message: killswitch 0 is KILLSWITCH_STATE_UNBLOCKED
+** Message: killswitches state KILLSWITCH_STATE_UNBLOCKED
+
+(bluetooth-applet:17138): GLib-GObject-WARNING **: invalid cast from `GtkAction' to `GtkActionGroup'
+** Message: killswitch 0 is KILLSWITCH_STATE_UNBLOCKED
+** Message: killswitches state KILLSWITCH_STATE_UNBLOCKED
+
+(process:17182): GLib-WARNING **: goption.c:2132: ignoring no-arg, optional-arg or filename flags (8) on option of type 0
+
+(process:17182): GLib-WARNING **: goption.c:2132: ignoring no-arg, optional-arg or filename flags (8) on option of type 0
+
+(process:17182): GLib-WARNING **: goption.c:2132: ignoring no-arg, optional-arg or filename flags (8) on option of type 0
+Failed to play sound: File or data not found
+
+(polkit-gnome-authentication-agent-1:17167): GLib-GObject-WARNING **: cannot register existing type `_PolkitError'
+
+(polkit-gnome-authentication-agent-1:17167): GLib-CRITICAL **: g_once_init_leave: assertion `initialization_value != 0' failed
+** Message: applet now removed from the notification area
+Initializing nautilus-gdu extension
+
+** (gnome-panel:17112): CRITICAL **: panel_applet_frame_change_background: assertion `PANEL_IS_WIDGET (GTK_WIDGET (frame)->parent)' failed
+** Message: applet now embedded in the notification area
+Initializing nautilus-open-terminal extension
+
+(gnome-appearance-properties:17417): GLib-GObject-WARNING **: g_object_newv: construct property "use-underline" for object `GtkButton' can't be set twice

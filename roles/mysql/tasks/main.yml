@@ -1,0 +1,8 @@
+---
+# tasks file for mysql
+- name: installing sql server
+  yum: name=mysql-server state=installed
+- name: copying of my.cnf
+  template: src=my.cnf.j2 dest=/etc/my.cnf mode=0775
+- name: start mysqld server
+  service: name=mysqld state=started

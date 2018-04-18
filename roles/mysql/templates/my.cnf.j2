@@ -1,0 +1,10 @@
+[mysqld]
+datadir= {{ datadir }}
+socket= {{ socket }}
+user= {{ user }}
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+
+[mysqld_safe]
+log-error= {{ log_error }}
+pid-file= {{ pid_file }}

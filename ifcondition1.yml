@@ -1,0 +1,46 @@
+---
+- hosts: server2 
+  remote_user: ansusr
+  become: yes
+  vars:
+       pkg: httpd
+  vars_files:
+        - file.yml 
+#  vars_prompt:
+#        - name: pkg3
+#          prompt: enter package name
+#          private: no
+  tasks:
+        - name: Install {{pkg}} package
+          yum: name={{item}} state=installed
+          with_items:
+                - httpd
+                - curl
+                - telnet
+#          ignore_errors: yes
+#        - name: Install {{pkg3}} package
+#          yum: name={{pkg3}} state=installed
+#          when: ansible_apparmor["status"] == enabled
+        - name: Copying of index.html
+          template: src=abc.conf.j2 dest=/var/www/html/abc.conf
+          tags:
+              - copy 
+#          when: ansible_apparmor["status"] == "disabled" 
+          register: result1
+        - debug: var=result1
+#  when: result1["changed"] == "true"
+        - name: start httpd service
+          service: name=httpd state=restarted
+#          when: result1["changed"] == "true"
+          tags:
+              - restart
+#          notify: start httpd service
+        - name: Installing the {{pkg1}} 
+          yum: name={{pkg1}} state=present
+#        - name: start the service
+#          service: name={{pkg}} state=restarted
+#  handlers:
+        - name: start httpd service
+          service: name=httpd state=restarted
+          tags:
+              - always         

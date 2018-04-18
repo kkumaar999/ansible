@@ -1,0 +1,7 @@
+---
+# defaults file for mysql
+datadir: /var/lib/mysql
+socket: /var/lib/mysql/mysql.sock
+user: mysql
+log_error: /var/log/mysqld.log
+pid_file: /var/run/mysqld/mysqld.pid

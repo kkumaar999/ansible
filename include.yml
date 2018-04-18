@@ -1,0 +1,12 @@
+---
+- hosts: server2
+  remote_user: ansusr
+  become: yes
+  tasks: 
+       - include_tasks: httpd.yml
+       - name: copying of index.html 
+         shell: echo "chekcing" > /var/www/html/index.html 
+         args:
+                 creates: /var/www/html/index.html 
+       - name: copying of script and executing it
+         script: ./kranthi.sh

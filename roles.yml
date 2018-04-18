@@ -1,0 +1,5 @@
+- hosts: server2
+  remote_user: ansusr
+  become: yes
+  roles:
+       - webserver

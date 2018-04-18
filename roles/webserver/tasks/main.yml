@@ -1,0 +1,10 @@
+---
+# tasks file for webserver
+- name: installing {{pkg}} 
+  yum: name={{pkg}} state=installed
+- name: copying of index file
+  copy: src=index.html dest=/var/www/html
+  notify: start webserver
+#- name: start webserver
+#  service: name=httpd state=started
+
